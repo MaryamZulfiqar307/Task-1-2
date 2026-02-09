@@ -1,8 +1,6 @@
 name: Python CI Pipeline
 
 on:
-  workflow_run:
-    workflows: ["ci"] 
   push:
     branches: [ main ]
   pull_request:
@@ -11,7 +9,6 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -28,9 +25,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run flake8 (style check)
-        run: |
-          flake8 src/
+        run: flake8 src/
 
       - name: Run tests
-        run: |
-          PYTHONPATH=. pytest
+        run: PYTHONPATH=. pytest

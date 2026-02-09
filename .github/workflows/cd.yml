@@ -6,19 +6,17 @@ on:
       - 'v*'
 
 permissions:
-   contents: write
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Run Final Sanity Check
-        run: |
-          PYTHONPATH=. python -m unittest discover tests
+        run: PYTHONPATH=. python -m unittest discover tests
 
       - name: Package Application
         run: |
