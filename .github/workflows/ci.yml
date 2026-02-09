@@ -1,6 +1,8 @@
 name: Python CI Pipeline
 
 on:
+  workflow_run:
+    workflows: ["ci"] 
   push:
     branches: [ main ]
   pull_request:
