@@ -1,3 +1,5 @@
+[![Python CI Pipeline](https://github.com/MaryamZulfiqar307/Task-1/actions/workflows/ci.yml/badge.svg)](https://github.com/MaryamZulfiqar307/Task-1/actions/workflows/ci.yml)
+
 # Lab: Intro to Continuous Integration (CI)
 
 This lab introduces the basics of **Continuous Integration (CI)** using **GitHub Actions**. You will observe how automated pipelines run on every code change, catch bugs early, and ensure code quality.
