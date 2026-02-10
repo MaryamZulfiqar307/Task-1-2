@@ -1,11 +1,6 @@
 name: Continuous Delivery (Production Release)
 
 on:
-  workflow_run:
-    workflows: ["ci"]
-    types:
-      - completed
-
   push:
     tags:
       - 'v*'  # match your tags like v1.0, v2.1 etc.
