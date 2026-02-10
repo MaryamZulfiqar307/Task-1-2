@@ -16,6 +16,11 @@ jobs:
       - name: Run Final Sanity Check
         run: python -m unittest discover tests
 
+      - name: Use deployment secret
+        run: |
+          echo "Using secret token"
+          echo "${{ secrets.DEPLOY_TOKEN }}"
+
       - name: Package Application
         run: |
           mkdir -p release
